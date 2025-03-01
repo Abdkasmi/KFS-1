@@ -1,4 +1,3 @@
-; boot.asm
 bits 32
 section .multiboot
     dd 0x1BADB002              ; Magic number for GRUB

@@ -21,7 +21,7 @@ size_t	strcmp(const char *s1, const char *s2)
 	return (s1[i] - s2[i]);
 }
 
-void	strncpy(const char *dest, const char *src, size_t size)
+void	strncpy(char *dest, char *src, size_t size)
 {
 	size_t	i;
 
