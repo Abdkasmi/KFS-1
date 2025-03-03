@@ -1,7 +1,7 @@
 CC = gcc
 ASM = nasm
 LD = ld
-CFLAGS = -m32 -ffreestanding -nostdlib -fno-builtin -fno-stack-protector
+CFLAGS = -m32 -Wall -Wextra -Werror -fno-builtin -fno-exceptions -fno-stack-protector -nostdlib -nodefaultlibs
 ASMFLAGS = -f elf32
 LDFLAGS = -m elf_i386 -T linker.ld
 
