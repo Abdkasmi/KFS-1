@@ -17,3 +17,5 @@ start:
 section .bss
 resb 8192                      ; Reserve 8KB for the stack
 stack_space:
+
+section .note.GNU-stack noalloc noexec nowrite progbits
