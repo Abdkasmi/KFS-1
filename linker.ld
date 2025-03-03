@@ -10,6 +10,16 @@ SECTIONS {
     .text : {
         *(.text);           /* Include all .text sections */
     }
+    
+    /* Read-only data section */
+    .rodata : {
+        *(.rodata)
+    }
+
+    /* Data section (writable, not executable) */
+    .data : {
+        *(.data)
+    }
 
     .bss : {                /* Uninitialized data section */
         *(.bss);
