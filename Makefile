@@ -7,7 +7,6 @@ LDFLAGS = -m elf_i386 -T linker.ld
 
 KERNEL = kernel.bin
 ISO = kernel.iso
-LINKER = linker.ld
 
 all: $(KERNEL) $(ISO)
 
@@ -31,5 +30,5 @@ $(ISO): $(KERNEL)
 re: clean all
 
 clean:
-	rm -f *.o $(KERNEL) $(ISO) $(LINKER)
+	rm -f *.o $(KERNEL) $(ISO)
 	rm -rf isodir
