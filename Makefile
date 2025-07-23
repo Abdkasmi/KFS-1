@@ -25,7 +25,7 @@ $(ISO): $(KERNEL)
 	echo 'menuentry "KFS-1" {' > isodir/boot/grub/grub.cfg
 	echo '  multiboot /boot/kernel.bin' >> isodir/boot/grub/grub.cfg
 	echo '}' >> isodir/boot/grub/grub.cfg
-	grub-mkrescue -o $(ISO) isodir
+	grub-mkrescue --compress=xz --modules="normal multiboot" -o $(ISO) isodir
 
 re: clean all
 
