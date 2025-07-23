@@ -1,7 +1,7 @@
 CC = gcc
 ASM = nasm
 LD = ld
-CFLAGS = -m32 -Wall -Wextra -Werror -fno-builtin -fno-exceptions -fno-stack-protector -fno-rtti -nostdlib -nodefaultlibs
+CFLAGS = -m32 -Wall -Wextra -Werror -fno-builtin -fno-exceptions -fno-stack-protector -nostdlib -nodefaultlibs
 ASMFLAGS = -f elf32
 LDFLAGS = -m elf_i386 -T linker.ld
 
@@ -22,7 +22,7 @@ kernel.o: kernel.c
 $(ISO): $(KERNEL)
 	mkdir -p isodir/boot/grub
 	cp $(KERNEL) isodir/boot/
-	echo 'menuentry "My Kernel" {' > isodir/boot/grub/grub.cfg
+	echo 'menuentry "KFS-1" {' > isodir/boot/grub/grub.cfg
 	echo '  multiboot /boot/kernel.bin' >> isodir/boot/grub/grub.cfg
 	echo '}' >> isodir/boot/grub/grub.cfg
 	grub-mkrescue -o $(ISO) isodir
