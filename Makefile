@@ -32,3 +32,6 @@ re: clean all
 clean:
 	rm -f *.o $(KERNEL) $(ISO)
 	rm -rf isodir
+
+install: 
+	sudo apt-get install nasm grub2-common xorriso qemu-system
